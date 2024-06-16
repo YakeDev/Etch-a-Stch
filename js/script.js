@@ -43,8 +43,15 @@ function blackSquare() {
   let squareOver = document.querySelectorAll("div.square");
 
   for (let i = 0; i < squareOver.length; i++) {
-    squareOver[i].addEventListener("mouseover", function () {
-      squareOver[i].className = "square-black";
-    });
+    for (let j = 0; j < 10; j++) {
+      squareOver[i].addEventListener("mouseover", function () {
+        // squareOver[i].className = "square-black";
+
+        squareOver[i].style.backgroundColor = `#303030`;
+
+        squareOver[i].style.border = "1px solid rgb(223, 227, 236)";
+        squareOver[i].style.opacity = j * 0.1;
+      });
+    }
   }
 }
