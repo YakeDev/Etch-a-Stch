@@ -22,10 +22,15 @@ body {
 .square {
   border: 1px solid #abb4c5;
   border-spacing: 0px;
-  /* transition: opacity 0.5s; */
-  /* background-color: #ffffff; */
-  /* transition: background-color 2s ease 0s; */
+  transition: opacity 0.5s;
+  background-color: #ffffff;
+  transition: background-color 2s ease 0s;
 }
 .square-black {
+  background-color: #303030;
+  border: 1px solid #abb4c5;
+}
+
+.square:hover {
   background-color: #303030;
 }
