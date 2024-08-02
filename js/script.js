@@ -39,6 +39,15 @@ function userSquare() {
   blackSquare();
 }
 
+function getRandomColor() {
+  var letters = "0123456789ABCDEF";
+  var color = "#";
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
 function blackSquare() {
   let squareOver = document.querySelectorAll("div.square");
 
@@ -47,9 +56,9 @@ function blackSquare() {
       squareOver[i].addEventListener("mouseover", function () {
         // squareOver[i].className = "square-black";
 
-        squareOver[i].style.backgroundColor = `#303030`;
-
-        squareOver[i].style.border = "1px solid rgb(223, 227, 236)";
+        squareOver[i].style.backgroundColor = `${getRandomColor()}`;
+        squareOver[i].style.borderCollapse = "collapse";
+        squareOver[i].style.border = "0.5px solid rgb(223, 227, 236)";
         squareOver[i].style.opacity = j * 0.1;
       });
     }
